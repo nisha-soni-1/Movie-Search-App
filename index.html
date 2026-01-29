@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main class="card" role="main" aria-labelledby="title">
+        <header>
+            <div class="logo">MS</div>
+            <div>
+                <h1 id="title">Movie Search App</h1>
+                <p class="lead">Search movies using the OMDb API. Built with async/await and and fetch.</p>
+            </div>
+        </header>
+
+        <section class="search-panel">
+            <div class="row">
+                <input id="query" type="search" placeholder="Search movies, e.g.The Matrix" autocomplete="off">
+                <select id="type">
+                    <option value="">All</option>
+                    <option value="movie">Movie</option>
+                    <option value="series">Series</option>
+                    <option value="episode">Episode</option>
+                </select>
+                <input id="year" type="number" placeholder="Year(optional)" min="1888" max="2100">
+                <button id="searchBtn" class="btn">Search</button>
+            </div>
+            <div class="meta-row">
+                <div id="status" class="muted">Enter a title to begin.</div>
+            </div>
+        </section>
+
+        <section id="results" class="results-grid" aria-live="polite">
+            <!-- results inserted here -->
+        </section>
+
+        <nav class="pagination" aria-label="Search result pagination">
+            <button id="preBtn" class="btn secondary" disabled>Prev</button>
+            <div id="pageInfo" class="muted">Page 0 of 0</div>
+            <button id="nextBtn" class="btn secondary" disabled>Next</button>
+        </nav>
+
+        <details style="margin-top: 14px">
+            <summary>How it work (short)</summary>
+            <p class="small">JS calls OMDb search endpoint with query and optional filters. Responses include up to 10
+                results per page; use the `page` parameter to paginate. Replace `YOUR_OMDB_API_KEY` in `script.js` with
+                your key from the OMDb site. See the OMDb docs for full parameter list.
+                :contentReference[oaicite:3]{index=3}</p>
+        </details>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
