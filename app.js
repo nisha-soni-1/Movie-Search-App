@@ -26,11 +26,36 @@ function buildUrl(params = {}) {
     return url.toString();
 }
 
-/* debounce helper to avoid too many requests while typing */
+/* debounce helper to avoid too many requests while typing 300ms ruk ke search ho */
 function debounce(fn, wait = 300) {
     let t;
     return (...args) => {
         clearTimeout(t);
         t = setTimeout(() => fn(...args), wait);
     };
+}
+
+/* show loading */
+
+function setLoading(loading=true) {
+    if (loading) {
+        statusEl.innerHTML = `<span class="loading">Searching…</span>`;
+    }else {
+        statusEl.textContent = '';
+    }
+}
+
+/* render empty / error */
+function showMessage(msg, isError=false) {
+    resultE1.innerHTML = `<div class="${isError ? 'err' : 'muted'}">${msg}</div>`;
+    pageInfo.textContent = `page 0 of 0`;
+    prevBtn.disabled = nextBtn.disabled = true;
+}
+
+/* render result cards */
+function renderResults(list) {
+    if (!Array.isArray(list) || list.length === 0) {
+        showMessage("No result found.");
+        return;
+    }
 }
