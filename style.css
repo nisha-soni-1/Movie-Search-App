@@ -91,99 +91,99 @@ h1 {
 }
 
 .btn {
-    padding: 10px 14px;
-    border-radius: 10px;
-    border: 0;
-    background: linear-gradient(90deg, var(--accent), #22c1c3);
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 0;
+  background: linear-gradient(90deg, var(--accent), #22c1c3);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .btn.secondary {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.06);
-    color: var(--white);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--white);
 }
 
 .meta-row {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .muted {
-    color: var(--muted);
-    font-size: 13px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .small {
-    font-size: 13px;
-    color: var(--muted);
+  font-size: 13px;
+  color: var(--muted);
 }
 
 .result-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px,1fr));
-    gap: 14px;
-    margin-top: 18px;
-    min-height: 140px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+  min-height: 140px;
 }
 
 .card-item {
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 8px;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .poster {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 6px;
-    background: linear-gradient(180deg, #0a0a0a,#111);
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #0a0a0a, #111);
 }
 
 .title {
-    font-size: 14px;
-    font-weight: 600;
-    margin-top: 8px;
-    text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+  text-align: center;
 }
 
 .subtitle {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
 }
 
 .pagination {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
 }
 
 .pagination .muted {
-    min-width: 110px;
-    text-align: center;
+  min-width: 110px;
+  text-align: center;
 }
 
 .loading {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
 }
 
 .err {
-    color: #ffbaba;
-    background: rgba(255,20,20,0.05);
-    padding: 8px;
-    border-radius: 8px;
-    color: #ffdede;
-    border: 1px solid rgba(255,20,20,0.06);
+  color: #ffbaba;
+  background: rgba(255, 20, 20, 0.05);
+  padding: 8px;
+  border-radius: 8px;
+  color: #ffdede;
+  border: 1px solid rgba(255, 20, 20, 0.06);
 }
