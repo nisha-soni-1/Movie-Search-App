@@ -36,16 +36,16 @@ function debounce(fn, wait = 300) {
 }
 
 /* show loading */
-function setLoading(loading=true) {
+function setLoading(loading = true) {
     if (loading) {
         statusEl.innerHTML = `<span class="loading">Searching…</span>`;
-    }else {
+    } else {
         statusEl.textContent = '';
     }
 }
 
 /* render empty / error */
-function showMessage(msg, isError=false) {
+function showMessage(msg, isError = false) {
     resultE1.innerHTML = `<div class="${isError ? 'err' : 'muted'}">${msg}</div>`;
     pageInfo.textContent = `page 0 of 0`;
     prevBtn.disabled = nextBtn.disabled = true;
@@ -57,15 +57,15 @@ function renderResults(list) {
         showMessage("No result found.");
         return;
     }
-    resultE1.innerHTML ='';
+    resultE1.innerHTML = '';
     list.forEach(item => {
         const el = document.createElement('article');
-        el.className ='card-item';
+        el.className = 'card-item';
         //poster fallback
-        const poster = (item.Poster && item.Poster !== 'N/A')  ? item.Poster : '';
+        const poster = (item.Poster && item.Poster !== 'N/A') ? item.Poster : '';
         const img = document.createElement('img');
         img.className = 'poster';
-        img.alt =`${item.Title} poster`;
+        img.alt = `${item.Title} poster`;
         img.src = poster || 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="100%" height="100%" fill="%230a0a0a"/><text x="50%" y="50%" font-size="18" fill="%239aa4b2" alignment-baseline="middle" text-anchor="middle">No Poster</text></svg>';
         el.appendChild(img);
         const title = document.createElement('div');
@@ -76,5 +76,17 @@ function renderResults(list) {
         subtitle.className = 'subtitle';
         subtitle.textContent = `&{item.year} • ${item.Type}`;
         el.appendChild(subtitle);
-    })
+    
+
+
+// optional: clicking opens IMDb page (if imdbID present)
+    if (item.imdbID) {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', () => {
+        window.open(`https://www.imdb.com/title/${item.imdbID}/`, '_blank');
+      });
+    }
+
+    resultsEl.appendChild(el);
+  });
 }
