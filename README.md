@@ -33,12 +33,12 @@ The application uses the OMDb `s=` search endpoint and handles loading, error, a
 
 ## Technologies Used
 
-- HTML5  
-- CSS3  
-- JavaScript (ES6+)  
-- OMDb API  
-- Fetch API  
-- Async / Await  
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- OMDb API
+- Fetch API
+- Async / Await
 
 ---
 
@@ -47,9 +47,11 @@ The application uses the OMDb `s=` search endpoint and handles loading, error, a
 This project requires an OMDb API key.
 
 ### Step 1: Generate an API Key
-Visit the official OMDb website and generate a free API key:
+Visit the official OMDb website and generate a free API key:  
 https://www.omdbapi.com/
 
 ### Step 2: Add API Key
-Open the JavaScript file and replace the placeholder:
+Open `app.js` and replace the API key value:
 
+```js
+const API_KEY = "581144cc";
